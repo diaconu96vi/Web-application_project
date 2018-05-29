@@ -1,0 +1,192 @@
+.championBG {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-size: 250%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 90%;
+}
+
+.centerIt {
+    width: 100px;
+    height: 0px;
+    background-color: transparent;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+.centerIt2 {
+    width: 900px;
+    height: 150px;
+    background-color: transparent;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+.test {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: url(https://s3-us-west-2.amazonaws.com/mood1995/images/league-map-5.jpg);
+  background-size: 250%;
+  background-repeat: no-repeat;
+  -webkit-animation: moveX 25s linear 0s infinite alternate, moveY 25s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes moveX {
+  from{background-position-x:-300px;}
+      to{background-position-x:-1100px;}
+}
+@-webkit-keyframes moveY {
+  from{background-position-y:-300px;}
+      to{background-position-y:-1100px;}
+}
+
+.cusNav {
+  position: absolute;
+  border-bottom: 75px solid #000;
+  width: 10000px;
+  opacity: 0.3;
+  left: -500px;
+  top: 33px;
+}
+
+.footer {
+  position: absolute;
+  border-bottom: 35px solid #000;
+  width: 10000px;
+  opacity: 0.5;
+  left: -500px;
+  top: -35px;
+}
+
+.footerText {
+  position: absolute;
+  top: -55px;
+}
+
+html {
+   background-color: black;
+}
+
+
+.original {
+  opacity: 1;
+  transition: none;
+}
+
+
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+}
+.play-button {
+  height: 300px;
+  width: 300px;
+  display: block;
+  margin: 60px auto;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+}
+.left {
+  height: 100%;
+  float: left;
+  background-color: #fff;
+  width: 36%;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+.triangle-1 {
+  transform: translate(0, -100%);
+  background-color: transparent;
+}
+.triangle-2 {
+  transform: translate(0, 100%);
+  background-color: transparent;
+}
+.triangle-1,
+.triangle-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  width: 0;
+  height: 0;
+  border-right: 300px solid #00BFFF;
+  border-top: 150px solid transparent;
+  border-bottom: 150px solid transparent;
+  transition: transform 0.25s ease;
+}
+.right {
+  height: 100%;
+  float: right;
+  width: 36%;
+  background-color: #fff;
+  transition: all 0.25s ease;
+}
+.paused .left {
+  width: 50%;
+}
+.paused .right {
+  width: 50%;
+}
+.paused .triangle-1 {
+  transform: translate(0, -50%);
+}
+.paused .triangle-2 {
+  transform: translate(0, 50%);
+}
+
+.btn-outline-success {
+  color: #5cb85c;
+  background-image: none;
+  background-color: transparent;
+  border-color: #5cb85c;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.btn-outline-success:focus, .btn-outline-success.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.5);
+          box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.5);
+}
+
+.btn-outline-success.disabled, .btn-outline-success:disabled {
+  color: #5cb85c;
+  background-color: transparent;
+}
+
+.btn-outline-success:active, .btn-outline-success.active,
+.show > .btn-outline-success.dropdown-toggle {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+
+

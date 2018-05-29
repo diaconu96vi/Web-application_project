@@ -1,0 +1,25 @@
+.da {
+    background-color: lightcoral;
+    color: blue;
+    text-decoration: overline;
+}
+
+#da1{
+    border: dotted lightblue;
+    padding-left: 23px;
+}
+
+.allowedbar {
+    background-color: aqua;
+    border-style: outset;
+    border-color: red;
+}
+
+.dbusers {
+    background-color: orange;
+    color: aqua;
+    border-width: 5px;
+    border-style: ridge;
+    border-color: lightcoral;
+    padding:20px;
+}
