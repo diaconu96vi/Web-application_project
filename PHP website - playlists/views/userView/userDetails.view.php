@@ -91,11 +91,7 @@
                         </form>
                     </ul>
                 </div>
-                <div>
-                    <?php
-                        require 'views/userView/facebookshare.php';
-                    ?>
-                </div>
+
             </div>
 
         </div>

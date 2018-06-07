@@ -63,8 +63,11 @@
                 <ul class="list-group">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         By mood
-                        <span class="badge badge-primary badge-pill">3</span>
-                        <button type="button" class="btn btn-outline-light">Relaxing</button>  <button type="button" class="btn btn-outline-light">Anger</button>  <button type="button" class="btn btn-outline-light">Chill</button>
+                        <span class="badge badge-primary badge-pill">1</span>
+                        <form  method="GET" action="/playlist">
+                            <input type="hidden" name="name" value="relaxing">
+                        <button type="submit" class="btn btn-outline-light"> Relaxing </button>
+                        </form>
                     </li>
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -72,34 +75,21 @@
 
                         <span class="badge badge-primary badge-pill">1</span>
 
-                        <button type="button" class="btn btn-outline-light">English</button>
+                        <form method="GET" action="/playlist">
+                            <input type="hidden" name="name" value="english">
+                            <button type="submit" class="btn btn-outline-light"> English </button>
+                        </form>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
 
                         By activity
                         <span class="badge badge-primary badge-pill">1</span>
-                        <button type="button" class="btn btn-outline-light">Working out</button>
+                        <form method="GET" action="/playlist">
+                            <input type="hidden" name="name" value="driving">
+                            <button type="submit" class="btn btn-outline-light"> Driving </button>
+                        </form>
                     </li>
                 </ul>
-                <h1 class="mainHeading" style="color: #F8AE4B;"> Users playlists  </h1>
-                <ul class="list-group">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Most popular
-                        <span class="badge badge-primary badge-pill"></span>
-                        <button type="button" class="btn btn-outline-light">user1:playlistX</button>  <button type="button" class="btn btn-outline-light">user2:playlistY</button>  <button type="button" class="btn btn-outline-light">user3:playlistZ</button>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Best rating
-                        <span class="badge badge-primary badge-pill"></span>
-                        <button type="button" class="btn btn-outline-light">user1:playlistX</button>  <button type="button" class="btn btn-outline-light">user2:playlistY</button>  <button type="button" class="btn btn-outline-light">user3:playlistZ</button>
-                    </li>
-                </ul>
-                <h1 class="mainHeading" style="color: #F8AE4B;"> Your playlist</h1>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Recent
-                    <span class="badge badge-primary badge-pill"></span>
-                    <button type="button" class="btn btn-outline-light">playlistX</button>  <button type="button" class="btn btn-outline-light">playlistY</button>  <button type="button" class="btn btn-outline-light">playlistZ</button>
-
             </div>
 
 

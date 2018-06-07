@@ -1,5 +1,5 @@
 
-<!DOCTYPE html><title>moodplaylist.com &#9835;</title><link rel="stylesheet" href="/views/divs/stylesheets/style.css"><link rel="shortcut icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/mood1995/images/favicon.ico"><html><html lang="en">
+<!DOCTYPE html><title>moodplaylist.com &#9835;</title><link rel="stylesheet" href="/stylesheets/style.css"><link rel="shortcut icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/mood1995/images/favicon.ico"><html><html lang="en">
 <!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
 
 <head>
@@ -27,6 +27,23 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="/views/divs/javascripts/bootstrap.min.js"></script>
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <!--
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-101656940-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <![endif]-->
 
 </head>
 
@@ -46,8 +63,11 @@
                 <ul class="list-group">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         By mood
-                        <span class="badge badge-primary badge-pill">3</span>
-                        <button type="button" class="btn btn-outline-light">Relaxing</button>  <button type="button" class="btn btn-outline-light">Anger</button>  <button type="button" class="btn btn-outline-light">Chill</button>
+                        <span class="badge badge-primary badge-pill">1</span>
+                        <form  method="GET" action="/admin/playlist">
+                            <input type="hidden" name="name2" value="relaxing">
+                            <button type="submit" class="btn btn-outline-light"> Relaxing </button>
+                        </form>
                     </li>
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -55,34 +75,21 @@
 
                         <span class="badge badge-primary badge-pill">1</span>
 
-                        <button type="button" class="btn btn-outline-light">English</button>
+                        <form method="GET" action="/admin/playlist">
+                            <input type="hidden" name="name2" value="english">
+                            <button type="submit" class="btn btn-outline-light"> English </button>
+                        </form>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
 
                         By activity
                         <span class="badge badge-primary badge-pill">1</span>
-                        <button type="button" class="btn btn-outline-light">Working out</button>
+                        <form method="GET" action="/admin/playlist">
+                            <input type="hidden" name="name2" value="driving">
+                            <button type="submit" class="btn btn-outline-light"> Driving </button>
+                        </form>
                     </li>
                 </ul>
-                <h1 class="mainHeading" style="color: #F8AE4B;"> Users playlists  </h1>
-                <ul class="list-group">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Most popular
-                        <span class="badge badge-primary badge-pill"></span>
-                        <button type="button" class="btn btn-outline-light">user1:playlistX</button>  <button type="button" class="btn btn-outline-light">user2:playlistY</button>  <button type="button" class="btn btn-outline-light">user3:playlistZ</button>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Best rating
-                        <span class="badge badge-primary badge-pill"></span>
-                        <button type="button" class="btn btn-outline-light">user1:playlistX</button>  <button type="button" class="btn btn-outline-light">user2:playlistY</button>  <button type="button" class="btn btn-outline-light">user3:playlistZ</button>
-                    </li>
-                </ul>
-                <h1 class="mainHeading" style="color: #F8AE4B;"> Your playlist</h1>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Recent
-                    <span class="badge badge-primary badge-pill"></span>
-                    <button type="button" class="btn btn-outline-light">playlistX</button>  <button type="button" class="btn btn-outline-light">playlistY</button>  <button type="button" class="btn btn-outline-light">playlistZ</button>
-
             </div>
 
 

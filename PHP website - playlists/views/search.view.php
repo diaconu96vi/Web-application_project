@@ -12,6 +12,7 @@
 
     <title>moodplaylist.com</title>
 
+
     <!-- Bootstrap Core CSS -->
     <link href="/views/divs/stylesheets/bootstrap.min.css" rel="stylesheet">
 
@@ -32,6 +33,12 @@
     <script id="search" type="application/javascript" src="/views/divs/javascripts/unibox.js"></script>
     <script src="/views/divs/javascripts/home-page.js"></script>
     <script src="/views/divs/javascripts/mobile-detect.js"></script>
+    <!--
+    <link href="/views/divs/stylesheets/styles1.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/views/divs/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/views/divs/js/jquery-ui-1.8.21.custom.min.js"></script>
+    <script type="text/javascript" src="/views/divs/js/main.js"></script>
+    -->
 
 
 
@@ -57,7 +64,7 @@
 
 <body>
 <div id="mainImg" class="mainImgLoaded"></div>
-<div id="mainBody" class="mainBodyLoaded">
+<div id="mainBody" class="mainBodyLoaded" style="overflow:scroll">
 
     <?php
         require 'divs/moodNavbar.php';
@@ -67,17 +74,39 @@
     <div id="content" class="container" style="padding-top:100px; margin-top:80px;">
         <div class="row">
             <div class="col-lg-12" style="text-align:center;">
+
+
                 <h1 class="mainHeading">Welcome to moodplaylist.com &#9835; </h1>
                 <h1 class="otherHeadings">A site that plays a playlist for the specific mood you are feeling as</h1>
-                <h1 class="otherHeadings">Type your mood below to get going! Or click this <button id="randomPlaylist" class="btn btn-primary randomButton"><img id="randomIcon" src="https://image.flaticon.com/icons/svg/25/25344.svg"/></button> to go random!</h1>
+                <h1 class="otherHeadings">Type your mood below to get going! Or click this
+                    <?php
+
+                        $random = mt_rand(1,3);
+                        if($random == 3){
+                            $location = "relaxing";
+                        }
+                        elseif($random == 2){
+                            $location = "driving";
+                        }
+                        elseif($random == 1){
+                            $location = "english";
+                        }
+                        echo "<a href='/playlist?name=$location' class='btn btn-primary randomButton'>
+                                <img id=\"randomIcon\" src=\"https://image.flaticon.com/icons/svg/25/25344.svg\"/></a>";
+                    ?>
+                     to go random!</h1>
 
                 <div id="search2">
-                    <input class="form-control" id="searchBox" style="text-align:center;">
+                    <form method="GET" action="/playlist">
+                        <input name="search" class="form-control">
+                    </form>
                 </div>
+
 
                 </br>
                 </br>
             </div>
+
         </div>
     </div>
 
